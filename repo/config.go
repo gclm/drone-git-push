@@ -12,7 +12,23 @@ func GlobalUser(email string) *exec.Cmd {
 		"--global",
 		"user.email",
 		email)
+	return cmd
+}
 
+func configGlobalUser(name string, email string) [2]*exec.Cmd {
+	var cmd [2]*exec.Cmd
+	cmd[0] = exec.Command(
+		"git",
+		"config",
+		"--global",
+		"user.email",
+		email)
+	cmd[1] = exec.Command(
+		"git",
+		"config",
+		"--global",
+		"user.name",
+		name)
 	return cmd
 }
 

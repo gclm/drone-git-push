@@ -40,7 +40,11 @@ func main() {
 			Usage:   "git author email",
 			EnvVars: []string{"PLUGIN_AUTHOR_EMAIL", "DRONE_COMMIT_AUTHOR_EMAIL"},
 		},
-
+		&cli.StringFlag{
+			Name:    "config.proxy",
+			Usage:   "git proxy",
+			EnvVars: []string{"PLUGIN_CONFIG_PROXY", "DRONE_CONFIG_PROXY"},
+		},
 		&cli.StringFlag{
 			Name:    "netrc.machine",
 			Usage:   "netrc machine",

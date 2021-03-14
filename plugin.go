@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/appleboy/drone-git-push/repo"
+	"github.com/gclm/drone-git-push/repo"
 )
 
 type (
